@@ -1,0 +1,23 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23
+  },
+  "configurePresets": [
+    {
+      "name": "Debug-Cfg",
+      "binaryDir": "cmake-build-debug",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_PROGRAM_PATH": "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.3 rel1/bin"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Debug",
+      "configurePreset": "Debug-Cfg"
+    }
+  ]
+}
