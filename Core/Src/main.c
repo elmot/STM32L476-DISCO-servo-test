@@ -137,8 +137,8 @@ int main(void)
                     break;
             }
         }
-        if (pwm < 1000) pwm = 1000;
-        if (pwm > 2000) pwm = 2000;
+        while (pwm > 2000) pwm -= 1000;
+        while (pwm < 1000) pwm += 1000;
         __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, pwm);
         itoa(pwm, txt, 10);
         BSP_LCD_GLASS_DisplayString((uint8_t *) txt);
